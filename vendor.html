@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VINAYAGA TIMBER MART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="login.html"><img src="logo/LOGO.png" width="125px"></a>
+            </div>
+            <a class="active" href="ADMIN.html">ADMIN</a>
+            <a href="vendor.html">NEW VENDOR</a>
+            <a href="transaction.html">TRANSCATION</a></option>
+            <a href="transaction.html">VENDOR SUMMARY</a></option>
+
+        </div>
+
+        <!--------categories----->
+        <div class="admincontent">
+            <div class="containerV">
+                <h2 class="title">VENDOR REGISTRATION</h2>
+                <form class="vendor">
+                    <label for="c_id">CUSTOMER ID:</label><br>
+                    <input type="number" id="c_id" name="c_id"><br><br>
+                    <label for="fname">FIRST NAME:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">LAST NAME:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="dob">DOB:</label><br>
+                    <input type="date" id="date" name="date"><br><br>
+                    <label for="email">EMAIL &#128231:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="Ph_no">PHONE NO.</label><br>
+                    <input type="number" id="Ph_no" name="Ph_no"><br><br>
+                    <label for="gender">GENDER</label><br>
+                    <input type="radio" id="male" name="gender" value="MALE">
+                    <label for="male">MALE</label><br>
+                    <input type="radio" id="female" name="gender" value="FEMALE">
+                    <label for="female">FEMALE</label><br><br>
+                    <label for="address">ADDRESS:</label><br>
+                    <input type="text" id="address" name="address"><br>
+                    <button type="submit" formaction ="vendor.php" >submit</button>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>
