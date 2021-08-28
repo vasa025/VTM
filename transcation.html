@@ -22,15 +22,13 @@
             <a href="#">VENDOR SUMMARY</a></option>
         </div>
     </div>
-
-
     <!--------categories----->
     <div class="admincontent">
         <div class="containerT">
             <h2 class="title"> TRANSCATION</h2>
             <form class="vendor" name="form1" action="#" onsubmit="">
                 <label for="c_id">CUSTOMER ID:</label><br>
-                <input type="number" id="c_id" name="c_id" required><br><br>
+                <input type="number" id="send" name="c_id" oninput="result.value=send.value" required><br><br>
                 <label for="date">DATE:</label><br>
                 <input type="date" id="date" name="date" required><br><br>
                 <label for="p_amt">PURCHASED AMT</label><br>
@@ -44,14 +42,14 @@
         <h2 class="title" id="C_S">CUSTOMER SUMMARY</h2>
         <form class="vendor" name="form1" action="#" onsubmit="">
             <label for="c_id">CUSTOMER ID:</label><br>
-            <input type="number" id="c_id" name="c_id" required><br><br>
+            <input type="number" id="result" name="c_id" required><br><br>
             <label for="total_amt">TOTAL PURCHASED</label><br>
             <input type="number" id="total_amt" name="total_amt" required><br><br>
             <label for="paid_amt">PAID AMT</label><br>
             <input type="number" id="paid_amt" name="paid_amt" required><br><br>
             <label for="pending_amt">PENDING AMT</label><br>
-            <input type="number" id="pending_amt" name="pending_amt" required><br><br>
-            <button type="submit" name="submit" value="Submit">Submit</button>
+            <output type="number" id="pending_amt" name="pending_amt" required><br><br>
+
         </form>
     </div>
     </div>
