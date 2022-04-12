@@ -8,85 +8,138 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="header">
+
+        <!-- The sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo/LOGO.png" width="125px">
+            </div>
+            <a class="active" href="index.html">HOME</a>
+            <a href="product.html">PRODUCT</a>
+            <a href="construction.html">construction</a></option>
+            <a href="timber.html">Timbers </a>
+            <a href="sun-roofs.html">Sun Roofs</a>
+            <a href="paint.html">Paints</a>
+            <a href="paitn.html">Painting accessories</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
         <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="logo/LOGO.png" width="125px">
+            <div class="content">
+                <h2 class="title">Cement,Bricks and Sands </h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="construction/bricks/bricks.jpeg">
+                        <h4> Bricks</h4>
+                        <p>Rs.15</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=briks1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="construction/sand/building-construction-river-sand-819.jpg">
+                        <h4>Sand</h4>
+                        <p>Rs.35000/load</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=steelrods  onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="construction/msand/m-sand-500x500.jpg">
+                        <h4>M-Sand</h4>
+                        <p>Rs.15000/load</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=sement1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="product.html">PRODUCT</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <a href="" class="btn1"> &#x1f6d2;</a>
-                    </ul>
-                </nav>
+                <h2 class="title">Iron</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="construction/steel bars/istockphoto-1063784898-612x612.jpg">
+                        <h4> Agni</h4>
+                        <p>Rs.300/kg</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=agni onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="pipes/ms-pipes-500x500.jpg">
+                        <h4>steel rods</h4>
+                        <p>Rs.400/kg</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=steelrods1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="pipes/galvanized-iron-pipe-500x500.png">
+                        <h4>galvanized iron pipe</h4>
+                        <p>Rs.400/kg</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=pipe onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                </div>
+                <h2 class="title">Cement,Bricks and Sands </h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="cement/product-jpeg-500x500.jpeg">
+                        <h4> chetinadu cement</h4>
+                        <p>Rs.900</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=cement3 onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="cement/ramco-cement-500x500.png">
+                        <h4> ramco cement</h4>
+                        <p>Rs.900</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=ramko1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+                    </div>
+                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Purchase Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="row row-2">
-                <h2>Construction</h2>
-                <select>
-                        <option><a href="construction.html">Construction</a></option>
-                        <option><a href=""> Timbers</a></option>
-                        <option><a href="">Sun Roofs</a></option>
-                        <option><a href="">Paints</a> </option>
-                        <option><a href="">Painting accessories</a> </option>
-                     </select>
+            <div class="modal-body" id="modalBody">
+                <h4 id="productName"></h4>
+                <h6 id="productPrice"></h6>
+                <label for="numQuantity">Quantity</label><br>
+                <input type="number" id="numQuantity" name="numQuantity" required>
             </div>
-            <h2>Cement,Bricks and Sands </h2>
-            <div class="row">
-                <div class="col-4">
-                    <img src="cement/product-jpeg-500x500.jpeg">
-                    <h4> chetinadu cement</h4>
-                    <p>Rs.900</p>
-                </div>
-                <div class="col-4">
-                    <img src="cement/ramco-cement-500x500.png">
-                    <h4> ramco cement</h4>
-                    <p>Rs.900</p>
-                </div>
-                <div class="col-4">
-                    <img src="construction/bricks/bricks.jpeg">
-                    <h4> Bricks</h4>
-                    <p>Rs.15</p>
-                </div>
-                <div class="col-4">
-                    <img src="construction/sand/building-construction-river-sand-819.jpg">
-                    <h4>Sand</h4>
-                    <p>Rs.35000/load</p>
-                </div>
-                <div class="col-4">
-                    <img src="construction/msand/m-sand-500x500.jpg">
-                    <h4>M-Sand</h4>
-                    <p>Rs.15000/load</p>
-                </div>
+            <div class="modal-footer">
+              <button type="button" id="modalButton" class="btn btn-secondary" data-dismiss="modal" onclick="submitModal(this.id)">submit</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function modelChangeFun(id){
+                   console.log("model function called",id);
+                   // combining id string with # to identify the qjery string as id name
+                   var val = "#" + id;
+       
+                   // getting name using parent div element which is finded by jquery id name
+                   var name = $(val).parent().children()[1];
+                   var price = $(val).parent().children()[2];
+                   document.getElementById("productName").innerHTML = name.innerHTML;
+                   document.getElementById("productPrice").innerHTML = price.innerHTML;
+        $("#exampleModalCenter").modal("show");
+        }
+        function submitModal(id) {
+                console.log("submit modal called",id);
+                $("#exampleModalCenter").modal("hide");
+                var modalProductName = document.getElementById("productName").innerHTML;
+                var modalProductPrice = document.getElementById("productPrice").innerHTML;
+                var modalProductQuantity = document.getElementById("numQuantity").value;
+                console.log("modalProductName",modalProductName,"modalProductPrice",modalProductPrice,"productQuantity",modalProductQuantity);
+                alert(`ProductName : ${modalProductName} \n ProductPrice : ${modalProductPrice} \n productQuantity : ${modalProductQuantity}`);
+            }
+    </script>
 
 
 
-            </div>
-            <h2>Iron</h2>
-            <div class="row">
-                <div class="col-4">
-                    <br>
-                    <img src="construction/steel bars/istockphoto-1063784898-612x612.jpg">
-                    <h4> Agni</h4>
-                    <p>Rs.300/kg</p>
-                </div>
-                <div class="col-4">
-                    <img src="pipes/ms-pipes-500x500.jpg">
-                    <h4>steel rods</h4>
-                    <p>Rs.400/kg</p>
-                </div>
-                <div class="col-4">
-                    <img src="pipes/galvanized-iron-pipe-500x500.png">
-                    <h4>galvanized iron pipe</h4>
-                    <p>Rs.400/kg</p>
-                </div>
-            </div>
 </body>
 
 </html>

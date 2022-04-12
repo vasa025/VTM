@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VINAYAGA TIMBER MART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="login.html"><img src="logo/LOGO.png" width="125px"></a>
+            </div>
+            <a class="active" href="ADMIN.html">ADMIN</a>
+            <a href="vendor.html">NEW VENDOR</a>
+            <a href="#">TRANSCATION</a></option>
+            <a href="#">VENDOR SUMMARY</a></option>
+        </div>
+    </div>
+    <!--------categories----->
+    <div class="admincontent">
+        <div class="containerT">
+            <h2 class="title"> TRANSCATION</h2>
+            <form class="vendor" name="form1" >
+                <label for="c_id">CUSTOMER ID:</label><br>
+                <input type="number" id="send" name="c_id" oninput="result.value=send.value" required><br><br>
+                <label for="date">DATE:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+                <label for="p_amt">PURCHASED AMT</label><br>
+                <input type="number" id="p_amt" name="p_amt" required><br><br>
+                <label for="paid_amt">PAID AMT</label><br>
+                <input type="number" id="paid_amt" name="paid_amt" required><br><br>
+                
+            </form>
+            <button class="vendor" onclick="sub123Amt()" style="background-color: #57c9e6;color: white;padding: 6px;border-radius: 16%;">Submit</button>
+        </div>
+        <div class="containerS"></div>
+        <h2 class="title" id="C_S">CUSTOMER SUMMARY</h2>
+        <form class="vendor" name="form1" >
+            <label for="c_id">CUSTOMER ID:</label><br>
+            <input type="number" id="result" name="c_id" required><br><br>
+            <label for="total_amt">TOTAL PURCHASED</label><br>
+            <input type="number" id="total_amt" name="total_amt" required><br><br>
+            <label for="paidAmt">PAID AMT</label><br>
+            <input type="number" id="paidAmt" name="paidAmt" required><br><br>
+            <label for="pending_amt">PENDING AMT</label><br>
+            <input type="number" id="pending_amt" name="pending_amt" required><br><br>
+
+        </form>
+        <button class="vendor" onclick="showAmt()" style="background-color: #57c9e6;color: white;padding: 6px;border-radius: 16%;">Submit</button>
+    </div>
+    </div>
+    <script>
+        var customerId = document.getElementById("send").value;
+        var dateOfBirth = document.getElementById("date").value;
+        var parchasedAmt = document.getElementById("p_amt").value;
+        var paidAmt = document.getElementById("paidAmt").value;
+        
+        function sub123Amt(){
+            var customerId = document.getElementById("send").value;
+            var purchaseDate = document.getElementById("date").value;
+            var parchasedAmt = document.getElementById("p_amt").value;
+            var paidAmt = document.getElementById("paid_amt").value;
+            console.log("customerId",customerId,"dateOfBirth",dateOfBirth,"parchasedAmt",parchasedAmt,"paidAmt",paidAmt);
+            console.log("subAmt called");
+            $.ajax({
+                type: "POST",
+                url:"http://127.0.0.1:3000/getTransDetails",
+                data:{"customerId":customerId,
+                    "purchaseDate":purchaseDate,
+                    "purchasedAmt":parchasedAmt,
+                    "paidAmt":paidAmt},
+                success:(result)=>{
+                    console.log(result);
+                },
+                error:(result)=>{
+                    console.log(result);
+                }
+            })
+        }
+
+        function showAmt(){
+            var customerId = document.getElementById("result").value;
+            $.ajax({
+                type:"GET",
+                data:{"customerId":customerId},
+                url: "http://localhost:3000/getTransDetails",
+                success:(result)=>{
+                    console.log("result",result);
+                    document.getElementById("total_amt").value = result["data"][0];
+                    document.getElementById("paidAmt").value = result["data"][1];
+                    document.getElementById("pending_amt").value = result["data"][2];
+                }
+            })
+
+        }
+    </script>
+
+</body>
+
+</html>

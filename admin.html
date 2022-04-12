@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
-    <!-- JavaScript Bundle with Popper -->
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 
 <body>
     <div class="header">
@@ -24,11 +23,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="product.html">PRODUCT</a></li>
-                        <li><a href="About.">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <a href="" class="btn1"> &#x1f6d2;</a>
+                        <li><a href="vendor.html">VENDORS</a></li>
+                        <li><a href="salesReport.html">SALES REPORT</a></li>
+                        <li><a href="salesLog.html">SALES LOG</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,8 +36,6 @@
                         <h4 style="padding-left: 25%">
                             <a href="" class="btn">Explore now &#10148;</a>
                         </h4>
-                        
-                
                     </h1>
                 </div>
 
@@ -83,76 +78,56 @@
                 <img src="cement/product-jpeg-500x500.jpeg">
                 <h4> chetinadu cement</h4>
                 <p>Rs.900</p>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=chetinadu onclick="modelChangeFun(this.id)">Add To Cart</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=chetinadu8 onclick="modelChangeFun(this.id)">Add To Cart</button>
             </div>
             <div class="col-4">
                 <img src="cement/ramco-cement-500x500.png">
                 <h4> ramco cement</h4>
                 <p>Rs.900</p>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=namco onclick="modelChangeFun(this.id)">Add To Cart</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=ramko2 onclick="modelChangeFun(this.id)">Add To Cart</button>
             </div>
             <div class="col-4">
                 <img src="asian paint colors/royale-matt-paint-500x500.jpg">
                 <h4> royal mart</h4>
                 <p>Rs.400</p>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=royal onclick="modelChangeFun(this.id)">Add To Cart</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=mart1 onclick="modelChangeFun(this.id)">Add To Cart</button>
             </div>
             <div class="col-4">
                 <img src="asian paint colors/tractor-asian-paint-500x500.jpg">
                 <h4> tractor asian</h4>
                 <p>Rs.400</p>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=asian onclick="modelChangeFun(this.id)">Add To Cart</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=asian4 onclick="modelChangeFun(this.id)">Add To Cart</button>
             </div>
 
         </div>
     </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Purchase Details</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <h4 id="productName"></h4>
-                <h6 id="productPrice"></h6>
-                <label for="numQuantity">Quantity</label><br>
-                <input type="number" id="numQuantity" name="numQuantity" required>
-            </div>
-            <div class="modal-footer">
-              <button type="button" id="modalButton" class="btn btn-secondary" data-dismiss="modal" onclick="submitModal(this.id)">submit</button>
-              
-            </div>
-          </div>
-        </div>
-      </div>
     <h2 class="title"> Featured products</h2>
     <div class="row">
         <div class="col-4">
-            <img src="pipes/gi-square-pipe-500x500.png">
+            <img src="cement/product-jpeg-500x500.jpeg">
             <h4> chetinadu cement</h4>
             <p>Rs.900</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=chetinadu1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=chetinadu7 onclick="modelChangeFun(this.id)">Add To Cart</button>
         </div>
         <div class="col-4">
             <img src="cement/ramco-cement-500x500.png">
             <h4> ramco cement</h4>
             <p>Rs.900</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=ramco1 onclick="modelChangeFun(this.id)">Add To Cart</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=chetinadu9 onclick="modelChangeFun(this.id)">Add To Cart</button>
         </div>
         <div class="col-4">
             <img src="asian paint colors/royale-matt-paint-500x500.jpg">
             <h4> royal mart</h4>
             <p>Rs.400</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=royal mart onclick="modelChangeFun(this.id)">Add To Cart</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=mart7 onclick="modelChangeFun(this.id)">Add To Cart</button>
+            
+
         </div>
         <div class="col-4">
-            <img src="construction/steel bars/istockphoto-1063784898-612x612.jpg">
+            <img src="asian paint colors/tractor-asian-paint-500x500.jpg">
             <h4> tractor asian</h4>
             <p>Rs.400</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=tractor asian onclick="modelChangeFun(this.id)">Add To Cart</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id=mart6 onclick="modelChangeFun(this.id)">Add To Cart</button>
         </div>
 
     </div>
@@ -161,19 +136,36 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-2">
-                    <img src="roof sheet/steel-sheets/17ft-corrugated-metal-roof-sheets.jpg" class="offer-img">
+                    <img src="roof sheet/steel-roof-sheet-for-sheds-500x500.png" class="offer-img">
                 </div>
                 <div class="col-2">
                     <h5>Exclusive offer</h5><br>
                     <h2>STEEL SHEETS</h2><br><br>
-                    <p>VMT</p>
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                     <a href="" class="btn2">Buy now &#x1f6d2</a>
-                    
                 </div>
-            </div>
-        </div>
-    </div>
-
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Purchase Details</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body" id="modalBody">
+                            <h4 id="productName"></h4>
+                            <h6 id="productPrice"></h6>
+                            <label for="numQuantity">Quantity</label><br>
+                            <input type="number" id="numQuantity" name="numQuantity" required>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="modalButton" class="btn btn-secondary" data-dismiss="modal" onclick="submitModal(this.id)">submit</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                </div>
     <script>
         function modelChangeFun(id){
             console.log("model function called",id);
@@ -199,9 +191,8 @@
                 console.log("modalProductName",modalProductName,"modalProductPrice",modalProductPrice,"productQuantity",modalProductQuantity);
                 alert(`ProductName : ${modalProductName} \n ProductPrice : ${modalProductPrice} \n productQuantity : ${modalProductQuantity}`);
             }
-        
+         
     </script>
-    <!-- <script type="text/javascript" src="./commonFunctions.js"></script> -->
 
 </body>
 

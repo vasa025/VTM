@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VINAYAGA TIMBER MART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="header">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="login.html"><img src="logo/LOGO.png" width="125px"></a>
+            </div>
+            <a class="active" href="ADMIN.html">ADMIN</a>
+            <a href="#">NEW VENDOR</a>
+            <a href="transcation.html">TRANSCATION</a></option>
+            <a href="vendorsum.html">VENDOR SUMMARY</a></option>
+
+        </div>
+
+        <!--------categories----->
+        <div class="admincontent">
+            <div class="containerV"><br><br><br><br>
+                <h2 class="title">VENDOR REGISTRATION</h2>
+                <form class="vendor">
+                    <label for="c_id">CUSTOMER ID:</label><br>
+                    <input type="number" id="c_id" name="fname" required><br><br>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" required><br><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" required><br><br>
+                    <label for="dob">DOB:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="email">EMAIL &#128231:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="Ph_no">Phone no.</label><br>
+                    <input type="number" id="Ph_no" name="Ph_no" required><br><br>
+                    <label for="gender">GENDER</label><br>
+                    <input type="radio" id="male" name="gender" value="MALE">
+                    <label for="male">MALE</label><br>
+                    <input type="radio" id="female" name="gender" value="FEMALE">
+                    <label for="female">FEMALE</label><br><br>
+                    <label for="address">ADDRESS:</label><br>
+                    <input type="text" id="address" name="address" required><br>
+                    
+                </form>
+                <button class="vendor" onclick="makelabs()" >Submit</button>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    function makelabs() 
+                    {
+
+                        var customerId = document.getElementById("c_id").value;
+                        var firstName = document.getElementById("fname").value;
+                        var lastName = document.getElementById("lname").value;
+                        var dateOfBirth = document.getElementById("date").value;
+                        var email = document.getElementById("email").value;
+                        var phoneNo = document.getElementById("Ph_no").value;
+                        var address = document.getElementById("address").value;
+
+                        var gender;
+
+                        if (document.getElementById("male").checked) {
+                            gender = "M"
+                        }
+                        else if (document.getElementById("female").checked) {
+                            gender = "F"
+                        }
+                        
+                        console.log("cust", customerId, "firts",firstName, "last",lastName,"date",dateOfBirth,"email",email,"phone",phoneNo,"address",address,"gender",gender);
+                        
+
+                        $.ajax({
+                            url:"http://localhost:3000/getUserDetails",
+                            type:"POST",
+                            data:{"customerId":customerId,
+                                "firstName":firstName,
+                                "lastName":lastName,
+                                "dateOfBirth":dateOfBirth,
+                                "email":email,
+                                "phoneNo":phoneNo,
+                                "gender":gender,
+                                "address":address},
+                            success:(data) => {
+                                console.log("data",data);
+                                alert("api called success");
+
+                            }
+
+                        });
+
+                    }
+                </script>
+            </div>
+        </div>
+</body>
+
+</html>
